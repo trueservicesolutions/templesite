@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+@layer base {
+  body {
+    @apply text-gray-800;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom colors */
+@layer utilities {
+  .bg-cream {
+    background-color: #F8F5E9;
+  }
+  
+  .bg-maroon {
+    background-color: #8B0000;
+  }
+  
+  .bg-gold {
+    background-color: #E2B13C;
+  }
+  
+  .bg-sage {
+    background-color: #7D9D9C;
+  }
+  
+  .text-maroon {
+    color: #8B0000;
+  }
+  
+  .text-gold {
+    color: #E2B13C;
+  }
+  
+  .text-sage {
+    color: #7D9D9C;
+  }
+  
+  .border-gold {
+    border-color: #E2B13C;
+  }
+  
+  .hover\:bg-gold:hover {
+    background-color: #E2B13C;
+  }
+  
+  .hover\:text-gold:hover {
+    color: #E2B13C;
+  }
+  
+  .focus\:ring-gold:focus {
+    --tw-ring-color: #E2B13C;
+  }
+}
+
+/* Typography */
+.font-serif {
+  font-family: 'Garamond', 'Georgia', serif;
+}
